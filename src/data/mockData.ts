@@ -3,6 +3,12 @@ import type { ScheduleItem } from '../domain/schedule'
 import type { Alert } from '../domain/alert'
 import type { Note } from '../domain/note'
 
+export interface MockSupplyInput {
+  medicationId: string
+  tabletsRemaining: number
+  tabletsPerDay: number
+}
+
 export const medications: Medication[] = [
   { id: 'm1', name: 'Lisinopril', dose: '10 mg', frequency: 'Once daily (morning)' },
   { id: 'm2', name: 'Metformin', dose: '500 mg', frequency: 'Twice daily (with meals)' },
@@ -22,6 +28,18 @@ export const alerts: Alert[] = [
   { id: 'a1', message: 'Evening dose due at 21:00', severity: 'info' },
   { id: 'a2', message: 'Refill needed: Metformin (5 days remaining)', severity: 'warning' },
   { id: 'a3', message: 'Next GP review: 2026-05-10', severity: 'info' },
+]
+
+// Demo supply values — fake numbers only, no real patient data.
+// m1 Lisinopril:   28 tablets, 1/day = 28 days → ok
+// m2 Metformin:    10 tablets, 2/day =  5 days → low
+// m3 Atorvastatin: 60 tablets, 1/day = 60 days → ok
+// m4 Aspirin:       2 tablets, 1/day =  2 days → critical
+export const mockSupplyInputs: MockSupplyInput[] = [
+  { medicationId: 'm1', tabletsRemaining: 28, tabletsPerDay: 1 },
+  { medicationId: 'm2', tabletsRemaining: 10, tabletsPerDay: 2 },
+  { medicationId: 'm3', tabletsRemaining: 60, tabletsPerDay: 1 },
+  { medicationId: 'm4', tabletsRemaining: 2,  tabletsPerDay: 1 },
 ]
 
 export const notes: Note[] = [
