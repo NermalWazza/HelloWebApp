@@ -31,3 +31,18 @@ Thumbs.db
 
 # Audit
 _Audit_Report/
+
+# AI / session artifacts
+.claude/
+.ai_sessions/
+*.session.json
+
+# Editor / IDE
+.vscode/
+.idea/
+*.suo
+*.user
+
+# .NET (future-proofing)
+bin/
+obj/
