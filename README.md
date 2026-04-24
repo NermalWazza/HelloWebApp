@@ -13,7 +13,22 @@ npm install
 npm run dev      # dev server
 npm run build    # production build
 npm run lint     # ESLint
+npm run test     # unit tests (Vitest)
 ```
+
+---
+
+## Validation
+
+Run before every commit:
+
+```bash
+npm run test
+npm run build
+python -m pre_commit run --all-files
+```
+
+All three must pass. Pre-commit runs secret detection (detect-secrets, TruffleHog), end-of-file, and whitespace checks.
 
 ---
 

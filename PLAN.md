@@ -47,5 +47,5 @@ HelloWebApp/
 ---
 
 ## Next Step
-Phase 2 complete: Vite + React + TypeScript scaffolded and committed.
-Phase 3: Domain extraction (notes/UI structure only, no real data).
+Phases 1–10 complete. See docs/ and git log for full history.
+Phase 11+: TBD — persistence decision recorded, domain model stable.

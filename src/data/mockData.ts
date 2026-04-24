@@ -31,14 +31,15 @@ export const alerts: Alert[] = [
 ]
 
 // Demo supply values — fake numbers only, no real patient data.
+// One entry per urgency tier to exercise the full range in the UI.
 // m1 Lisinopril:   28 tablets, 1/day = 28 days → ok
 // m2 Metformin:    10 tablets, 2/day =  5 days → low
-// m3 Atorvastatin: 60 tablets, 1/day = 60 days → ok
+// m3 Atorvastatin: 14 tablets, 1/day = 14 days → watch
 // m4 Aspirin:       2 tablets, 1/day =  2 days → critical
 export const mockSupplyInputs: MockSupplyInput[] = [
   { medicationId: 'm1', tabletsRemaining: 28, tabletsPerDay: 1 },
   { medicationId: 'm2', tabletsRemaining: 10, tabletsPerDay: 2 },
-  { medicationId: 'm3', tabletsRemaining: 60, tabletsPerDay: 1 },
+  { medicationId: 'm3', tabletsRemaining: 14, tabletsPerDay: 1 },
   { medicationId: 'm4', tabletsRemaining: 2,  tabletsPerDay: 1 },
 ]
 
