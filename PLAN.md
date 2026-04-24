@@ -47,5 +47,5 @@ HelloWebApp/
 ---
 
 ## Next Step
-Initialize repo + docs only.
-Do NOT scaffold app yet.
+Phase 2 complete: Vite + React + TypeScript scaffolded and committed.
+Phase 3: Domain extraction (notes/UI structure only, no real data).
