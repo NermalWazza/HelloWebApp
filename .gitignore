@@ -3,39 +3,31 @@ __pycache__/
 *.py[cod]
 .venv/
 
-# Secrets
+# Secrets / credentials
 .env
 .env.*
 !.env.example
-*.key
 *.pem
 secrets.*
 
-# Logs
-*.log
-_Audit_Report/
-
-# Node
+# Node / Vite
 node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
 # OS
-Thumbs.db
 .DS_Store
+Thumbs.db
 
-# .NET
-bin/
-obj/
-
-# VS Code local config
-.vscode/mcp.json
-# Session / runtime data
-Sessions/**
-**/Session_Packet.md
-**/Session_*.md
-session_data/
-runtime/
-.codex/
-.claude/
-.ai_sessions/
-*.session.json
-*.session.log
+# Audit
+_Audit_Report/
