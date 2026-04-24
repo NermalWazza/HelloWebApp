@@ -1,0 +1,41 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+secrets.*
+
+# Logs
+*.log
+_Audit_Report/
+
+# Node
+node_modules/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# .NET
+bin/
+obj/
+
+# VS Code local config
+.vscode/mcp.json
+# Session / runtime data
+Sessions/**
+**/Session_Packet.md
+**/Session_*.md
+session_data/
+runtime/
+.codex/
+.claude/
+.ai_sessions/
+*.session.json
+*.session.log
