@@ -13,7 +13,7 @@ export default function Dashboard() {
       </header>
       <main className="dashboard-grid">
         <MedicationCard medications={medications} />
-        <ScheduleCard schedule={schedule} />
+        <ScheduleCard schedule={schedule} medications={medications} />
         <AlertPanel alerts={alerts} />
         <NotesPanel notes={notes} />
       </main>

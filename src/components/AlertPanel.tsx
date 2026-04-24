@@ -1,4 +1,4 @@
-import type { Alert } from '../data/mockData'
+import type { Alert } from '../domain/alert'
 
 interface Props {
   alerts: Alert[]
@@ -21,7 +21,7 @@ export default function AlertPanel({ alerts }: Props) {
           {alerts.map((alert) => (
             <li key={alert.id} className={`alert-item alert-${alert.severity}`}>
               <span className="alert-badge">{severityLabel[alert.severity]}</span>
-              <span className="alert-text">{alert.text}</span>
+              <span className="alert-text">{alert.message}</span>
             </li>
           ))}
         </ul>

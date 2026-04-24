@@ -1,4 +1,4 @@
-import type { Note } from '../data/mockData'
+import type { Note } from '../domain/note'
 
 interface Props {
   notes: Note[]

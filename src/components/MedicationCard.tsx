@@ -1,4 +1,4 @@
-import type { Medication } from '../data/mockData'
+import type { Medication } from '../domain/medication'
 
 interface Props {
   medications: Medication[]
