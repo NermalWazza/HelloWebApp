@@ -56,32 +56,15 @@ npm run preview
 
 ---
 
-### Option 4 — GitHub Pages Demo
-
-Not yet configured.
-
-To enable:
-
-1. Update `vite.config.ts`:
-
-```ts
-export default defineConfig({
-  base: '/HelloWebApp/',
-  plugins: [react()],
-})
-```
-
-2. Add workflow: `.github/workflows/deploy.yml`
-
-3. Enable Pages → GitHub Actions
-
-Result:
+### Option 4 — GitHub Pages (live)
 
 ```
-https://<username>.github.io/HelloWebApp/
+https://nermalwazza.github.io/HelloWebApp/
 ```
 
-See [Vite static deploy guide](https://vite.dev/guide/static-deploy.html) for details.
+Deployed automatically on push to `main` via `.github/workflows/deploy.yml`.
+
+> One-time setup required: GitHub → Settings → Pages → Source → **GitHub Actions**
 
 ---
 
