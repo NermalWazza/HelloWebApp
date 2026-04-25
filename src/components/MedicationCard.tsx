@@ -8,7 +8,7 @@ interface Props {
 
 const urgencyLabel: Record<SupplyStatus['urgency'], string> = {
   ok: 'OK',
-  watch: 'Review threshold',
+  watch: 'Watch',
   low: 'Low',
   critical: 'Critical',
 }
@@ -30,7 +30,7 @@ export default function MedicationCard({ medications, supplyStatuses }: Props) {
                 <span className="med-name">{med.name}</span>
                 {status && (
                   <>
-                    <span className="supply-status-label">Supply</span>
+                    <span className="supply-status-label">Supply:</span>
                     <span className={`supply-badge supply-${status.urgency}`}>
                       {urgencyLabel[status.urgency]}
                     </span>

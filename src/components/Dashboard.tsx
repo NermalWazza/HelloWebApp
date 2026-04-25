@@ -39,6 +39,9 @@ export default function Dashboard() {
         >
           {simulateLow ? 'Reset supply' : 'Simulate low supply'}
         </button>
+        {simulateLow && (
+          <span className="demo-active-indicator">Demo mode: Lisinopril supply reduced to 1 tablet.</span>
+        )}
         <span className="demo-toggle-label">Demo interaction &mdash; does not store data</span>
       </div>
       <main className="dashboard-grid">

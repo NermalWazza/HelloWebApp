@@ -8,7 +8,7 @@ export default function WireframeNotice() {
         <strong>Signal:</strong> This prototype shows a simple mock supply-status model that highlights risk before it becomes critical.
       </p>
       <p className="wireframe-safe">
-        <strong>Demo only</strong> &mdash; uses mock data only. No real patient or medical data.
+        <strong>Demo only</strong> &mdash; uses mock data only. No real patient or medical data. The low-supply simulation is local and does not persist.
       </p>
       <ul className="wireframe-features">
         <li>React + TypeScript UI &mdash; component dashboard with four domain panels</li>
