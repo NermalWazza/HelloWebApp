@@ -1,8 +1,87 @@
 # HelloWebApp
 
-Standalone web app prototype inspired by MedMon. See [PLAN.md](PLAN.md) for phased roadmap and rules.
+Standalone React/Vite prototype inspired by MedMon.
+Demonstrates medication-dashboard UX patterns using **sample data only**.
 
-**Rules:** No secrets. No real patient data. No medical advice logic. No direct MedMon copy. One bounded AI change per run.
+---
+
+## Rules / Safety
+
+- No secrets
+- No real patient data
+- No medical advice logic
+- No direct MedMon code reuse
+
+---
+
+## Demo / Sandbox
+
+### Option 1 — GitHub Codespaces (1-click)
+
+1. Click **Code** → **Codespaces**
+2. Click **Create codespace on `nwlocal`**
+3. Wait for environment
+4. Run:
+
+```bash
+npm install
+npm run dev
+```
+
+---
+
+### Option 2 — Local Run (fastest)
+
+```bash
+git clone https://github.com/NermalWazza/HelloWebApp.git
+cd HelloWebApp
+npm install
+npm run dev
+```
+
+Open:
+
+```
+http://localhost:5173
+```
+
+---
+
+### Option 3 — Production Preview
+
+```bash
+npm run build
+npm run preview
+```
+
+---
+
+### Option 4 — GitHub Pages Demo
+
+Not yet configured.
+
+To enable:
+
+1. Update `vite.config.ts`:
+
+```ts
+export default defineConfig({
+  base: '/HelloWebApp/',
+  plugins: [react()],
+})
+```
+
+2. Add workflow: `.github/workflows/deploy.yml`
+
+3. Enable Pages → GitHub Actions
+
+Result:
+
+```
+https://<username>.github.io/HelloWebApp/
+```
+
+See [Vite static deploy guide](https://vite.dev/guide/static-deploy.html) for details.
 
 ---
 
@@ -10,17 +89,14 @@ Standalone web app prototype inspired by MedMon. See [PLAN.md](PLAN.md) for phas
 
 ```bash
 npm install
-npm run dev      # dev server
-npm run build    # production build
-npm run lint     # ESLint
-npm run test     # unit tests (Vitest)
+npm run dev
+npm run test
+npm run build
 ```
 
 ---
 
-## Validation
-
-Run before every commit:
+## Validation (Required Before Commit)
 
 ```bash
 npm run test
@@ -28,51 +104,36 @@ npm run build
 python -m pre_commit run --all-files
 ```
 
-All three must pass. Pre-commit runs secret detection (detect-secrets, TruffleHog), end-of-file, and whitespace checks.
+All must pass:
+
+- Tests (Vitest)
+- Build (TypeScript + Vite)
+- Secret scanning (detect-secrets, TruffleHog)
 
 ---
 
 ## Stack
 
-- Vite + React + TypeScript
-- Tailwind CSS (phase 3+)
-- PowerShell automation scripts
+- Vite
+- React
+- TypeScript
+- Vitest
+- ESLint
 
 ---
 
-## Vite Template Notes
+## Roadmap
 
-This project was scaffolded with the `react-ts` Vite template. The sections below are from that template for reference.
+See [PLAN.md](PLAN.md).
 
-### React + TypeScript + Vite
+---
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Intent
 
-Currently, two official plugins are available:
+This repo is a **controlled, demonstrable system**:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Clear UX signal > complexity
+- Deterministic behaviour
+- No hidden data or logic
 
-### Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      tseslint.configs.recommendedTypeChecked,
-      tseslint.configs.strictTypeChecked,
-      tseslint.configs.stylisticTypeChecked,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-    },
-  },
-])
-```
+Used for portfolio demonstration, safe iteration, and AI-assisted workflows.
