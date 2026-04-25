@@ -1,5 +1,7 @@
 # HelloWebApp
 
+[![Deploy](https://github.com/NermalWazza/HelloWebApp/actions/workflows/deploy.yml/badge.svg)](https://github.com/NermalWazza/HelloWebApp/actions/workflows/deploy.yml)
+
 Standalone React/Vite prototype inspired by MedMon.
 Demonstrates medication-dashboard UX patterns using **sample data only**.
 
