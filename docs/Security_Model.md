@@ -14,7 +14,7 @@ No secrets. No real patient data. Local prototype only.
 
 **MedMon database boundary:**
 
-- `C:\GFS\DEV\MedMon\medmon.db` was identified in Phase 5 as a local SQLite database that may contain real usage data.
+- `<external_reference_project_path>/MedMon/medmon.db` was identified in Phase 5 as a local SQLite database that may contain real usage data.
 - That file must not be read, imported, copied, seeded, migrated, or transformed into HelloWebApp under any circumstances.
 - MedMon is a reference project only. Data does not cross the boundary.
 

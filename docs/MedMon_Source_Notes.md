@@ -6,7 +6,7 @@
 
 ## Review Boundary
 
-- MedMon reviewed read-only at `C:\GFS\DEV\MedMon`.
+- MedMon reviewed read-only at `<external_reference_project_path>/MedMon`.
 - No code copied into HelloWebApp.
 - No MedMon files modified.
 - HelloWebApp remains a separate, clean implementation.
@@ -106,7 +106,7 @@ MedMon uses the same Repo_Safety_Baseline pattern (`.pre-commit-config.yaml`, `.
 
 ### medmon.db — local database (HIGH attention warranted)
 
-- File is **present on disk** (`C:\GFS\DEV\MedMon\medmon.db`, 16 KB, last written 2026-04-22).
+- File is **present on disk** (`<external_reference_project_path>/MedMon/medmon.db`, 16 KB, last written 2026-04-22).
 - Correctly excluded from git via `.gitignore` — not in the repository.
 - However, 16 KB indicates active use; the file likely contains real medication records and dose logs.
 - **Risk:** if the MedMon repo is ever shared, cloned, or backed up carelessly, this file could travel with it.

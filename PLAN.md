@@ -3,7 +3,7 @@
 ## Purpose
 Standalone web app derived from MedMon concept.
 
-- Path: C:\GFS\DEV\HelloWebApp
+- Path: <local_dev_path>/HelloWebApp
 - Separate repo (DO NOT modify MedMon)
 - Web-first, safe, reviewable by another AI
 
