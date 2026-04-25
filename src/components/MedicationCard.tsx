@@ -20,7 +20,7 @@ export default function MedicationCard({ medications, supplyStatuses }: Props) {
 
   return (
     <div className="card">
-      <h2 className="card-title">Medications</h2>
+      <h2 className="card-title">Medications <span className="section-label">(Mock Data)</span></h2>
       <ul className="card-list">
         {medications.map((med) => {
           const status = statusById[med.id]

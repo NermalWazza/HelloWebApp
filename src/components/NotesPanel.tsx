@@ -7,7 +7,7 @@ interface Props {
 export default function NotesPanel({ notes }: Props) {
   return (
     <div className="card">
-      <h2 className="card-title">Notes</h2>
+      <h2 className="card-title">Notes <span className="section-label">(Demo)</span></h2>
       {notes.length === 0 ? (
         <p className="empty-state">No notes recorded.</p>
       ) : (

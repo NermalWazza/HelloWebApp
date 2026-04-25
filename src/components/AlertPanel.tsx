@@ -13,7 +13,7 @@ const severityLabel: Record<Alert['severity'], string> = {
 export default function AlertPanel({ alerts }: Props) {
   return (
     <div className="card">
-      <h2 className="card-title">Alerts</h2>
+      <h2 className="card-title">Alerts <span className="section-label">(Demo)</span></h2>
       {alerts.length === 0 ? (
         <p className="empty-state">No active alerts.</p>
       ) : (

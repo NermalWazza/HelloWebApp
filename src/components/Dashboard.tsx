@@ -2,6 +2,7 @@ import MedicationCard from './MedicationCard'
 import ScheduleCard from './ScheduleCard'
 import AlertPanel from './AlertPanel'
 import NotesPanel from './NotesPanel'
+import WireframeNotice from './WireframeNotice'
 import { medications, schedule, alerts, notes, mockSupplyInputs } from '../data/mockData'
 import { calculateSupplyStatus } from '../domain/supplyCalculator'
 
@@ -17,6 +18,7 @@ export default function Dashboard() {
         <h1 className="dashboard-title">HelloWebApp &mdash; MedMon Prototype</h1>
         <span className="dashboard-badge">Mock data only &mdash; no real patient data</span>
       </header>
+      <WireframeNotice />
       <main className="dashboard-grid">
         <MedicationCard medications={medications} supplyStatuses={supplyStatuses} />
         <ScheduleCard schedule={schedule} medications={medications} />
