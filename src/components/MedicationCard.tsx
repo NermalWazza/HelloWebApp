@@ -29,9 +29,12 @@ export default function MedicationCard({ medications, supplyStatuses }: Props) {
               <div className="med-header">
                 <span className="med-name">{med.name}</span>
                 {status && (
-                  <span className={`supply-badge supply-${status.urgency}`}>
-                    {urgencyLabel[status.urgency]}
-                  </span>
+                  <>
+                    <span className="supply-status-label">Supply</span>
+                    <span className={`supply-badge supply-${status.urgency}`}>
+                      {urgencyLabel[status.urgency]}
+                    </span>
+                  </>
                 )}
               </div>
               <span className="med-meta">

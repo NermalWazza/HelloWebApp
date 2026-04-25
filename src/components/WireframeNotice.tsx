@@ -1,21 +1,19 @@
 export default function WireframeNotice() {
   return (
     <div className="wireframe-notice">
-      <p className="wireframe-description">
-        A web-based medication tracking dashboard inspired by MedMon.
-        Demonstrates React + TypeScript with a separated domain model,
-        pure supply-status calculation, and security-baseline discipline.
+      <p className="wireframe-problem">
+        <strong>Problem:</strong> People can run out of medication without clear early warning.
+      </p>
+      <p className="wireframe-signal">
+        <strong>Signal:</strong> This prototype shows a simple mock supply-status model that highlights risk before it becomes critical.
       </p>
       <p className="wireframe-safe">
-        <strong>Demo only</strong> &mdash; uses mock data only.
-        No real patient or medical data.
+        <strong>Demo only</strong> &mdash; uses mock data only. No real patient or medical data.
       </p>
       <ul className="wireframe-features">
-        <li>UI prototype &mdash; dashboard layout with four domain panels</li>
-        <li>Supply status logic &mdash; pure arithmetic, four urgency tiers (ok / watch / low / critical)</li>
-        <li>Domain separation &mdash; types isolated in <code>src/domain/</code></li>
-        <li>Unit tests &mdash; supply calculator covered by Vitest (8 tests)</li>
-        <li>Security baseline &mdash; pre-commit hooks, secret scanning, no real data in repo</li>
+        <li>React + TypeScript UI &mdash; component dashboard with four domain panels</li>
+        <li>Separated domain model &mdash; types and logic isolated in <code>src/domain/</code></li>
+        <li>Tested supply-status calculator &mdash; pure arithmetic, four urgency tiers, 8 Vitest tests</li>
       </ul>
     </div>
   )
