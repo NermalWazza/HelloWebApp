@@ -159,7 +159,46 @@ git commit -m "Remove unused hero.png asset"
 
 ---
 
-## 9. Post-Release Standing Rules
+## 9. GitHub Pages Deployment Configuration
+
+**Audit date:** 2026-04-26
+
+| Item | Value |
+|---|---|
+| Pages source | GitHub Actions |
+| Workflow file | `.github/workflows/deploy.yml` |
+| Trigger | Push to `main`; manual `workflow_dispatch` |
+| Build command | `npm run build` (`tsc -b && vite build`) |
+| Build output path | `dist/` |
+| Vite base path | `/HelloWebApp/` |
+| Expected live URL | `https://nermalwazza.github.io/HelloWebApp/` |
+| `npm ci` / `npm install` | `npm ci` (package-lock.json present) |
+| Permissions | `contents: read`, `pages: write`, `id-token: write` |
+| Environment | `github-pages` |
+
+### Manual verification steps
+
+After pushing to `main`:
+
+1. Go to `https://github.com/NermalWazza/HelloWebApp/actions`
+2. Confirm **Deploy to GitHub Pages** workflow run completes (green tick).
+3. Open `https://nermalwazza.github.io/HelloWebApp/`
+4. Verify the app loads and the "Simulate low supply" toggle works.
+5. Confirm deploy badge in README shows green.
+
+### Release verdict (GitHub Pages)
+
+- [ ] Workflow exists and `workflow_dispatch` is enabled
+- [ ] `vite.config.ts` base path matches repo name
+- [ ] Build passes locally
+- [ ] Tests pass locally
+- [ ] No sensitive data committed
+- [ ] Workflow run succeeds on GitHub Actions
+- [ ] Live URL loads correctly
+
+---
+
+## 10. Post-Release Standing Rules
 
 - Run `npm test && npm run build && python -m pre_commit run --all-files` before every commit
 - No real patient or medication data may enter this repository at any time
